@@ -1,0 +1,340 @@
+<!--<?php
+  $host="localhost";
+  $user="root";
+  $pass="1234";
+  $db="pi";
+  $connect=mysqli_connect($host, $user, $pass, $db);
+  $conndb="select * From mg2";
+  $result=mysqli_query($connect,$conndb);
+
+  while($row=mysqli_fetch_row($result))
+  {
+
+
+?>-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Caloria</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.min.css" rel="stylesheet"> 
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/lightbox.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
+  <link href="css/responsive.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.css"/> 
+    <script src="https://cdn.datatables.net/t/bs-3.3.6/jqc-1.12.0,dt-1.10.11/datatables.min.js"></script>
+    <script>
+        jQuery(function($){
+            $("#example1").DataTable();
+        });
+    </script>
+
+  <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+  <![endif]-->
+  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link rel="shortcut icon" href="images/favicon.ico">
+
+
+
+</head><!--/head-->
+
+<body>
+
+  <!--.preloader-->
+  <div class="preloader"> <i class="fa fa-circle-o-notch fa-spin"></i></div>
+  <!--/.preloader-->
+
+  <header id="home">
+    <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="item active" style="background-image: url(images/slider/kymg1.jpg)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">다이어트 <span>Caloria</span></h1>
+            <p class="animated fadeInRightBig">환영합니다.</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="LOGIN.html">로그아웃</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/kymg2.jpg)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">다이어트<span>Caloria</span></h1>
+            <p class="animated fadeInRightBig">환영합니다.</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="LOGIN.html">로그아웃</a>
+          </div>
+        </div>
+        <div class="item" style="background-image: url(images/slider/kymg3.jpg)">
+          <div class="caption">
+            <h1 class="animated fadeInLeftBig">다이어트<span>Caloria</span></h1>
+            <p class="animated fadeInRightBig">환영합니다.</p>
+            <a data-scroll class="btn btn-start animated fadeInUpBig" href="LOGIN.html">로그아웃</a>
+          </div>
+        </div>
+      </div>
+      <a class="left-control" href="#home-slider" data-slide="prev"><i class="fa fa-angle-left"></i></a>
+      <a class="right-control" href="#home-slider" data-slide="next"><i class="fa fa-angle-right"></i></a>
+
+      <a id="tohash" href="#services"><i class="fa fa-angle-down"></i></a>
+    </div><!--/#home-slider-->
+
+    <div class="main-nav">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!--<a class="navbar-brand" href="index.html">
+            <h1><img class="img-responsive" src="images/logo.png" alt="logo"></h1>
+          </a>-->                    
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">                 
+            <li class="scroll active"><a href="#home">Home</a></li>
+            <li class="scroll"><a href="#services">회원 목록</a></li> 
+            <li class="scroll"><a href="#about-us">BMI 계산기</a></li>
+            <li class="scroll"><a href="#portfolio">게시판</a></li>       
+          </ul>
+        </div>
+      </div>
+    </div><!--/#main-nav-->
+  </header><!--/#home-->
+
+  <section id="services">
+    <div class="content-wrapper">
+        
+        <!-- Main content -->
+        
+        <section class="content">
+            <div class="container-fluid">
+                <div class="row">
+          
+                    <div class="col-12">
+                        <div class="card">
+<!--                            <div class="card-header">
+                                <h3 class="card-title">Hover Data Table</h3>
+                            </div> -->
+                            <!-- /.card-header -->
+                            <div class="card-body">
+                            <form name="kikan">
+              <input type=hidden name="j">
+                                <table id="example1" class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+
+                                            <th>회원번호</th>
+                                            <th>이름</th>
+                                            <th>연락처</th>
+                                            <th>회원성별</th>
+                                            <th>상세 정보 확인</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+           
+                                        <tr>
+                                            <th>000001</th>
+                                            <th>송호중</th>
+                                            <th>01027146692</th>
+                                            <th>남자</th>
+                                            <th><a href="patient1.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000002</th>
+                                            <th>차진안</th>
+                                            <th>01025894578</th>
+                                            <th>남자</th>
+                                            
+                                            <th><a href="patient2.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000003</th>
+                                            <th>김중근</th>
+                                            <th>01020581729</th>
+                                            <th>남자</th>
+                                            <th><a href="patient3.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000004</th>
+                                            <th>이지원</th>
+                                            <th>01030991609</th>
+                                            <th>여자</th>
+                                            <th><a href="patient4.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000005</th>
+                                            <th>이준호</th>
+                                            <th>01068651798</th>
+                                            <th>남자</th>
+                                            <th><a href="patient5.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000006</th>
+                                            <th>김선영</th>
+                                            <th>01072931215</th>
+                                            <th>여자</th>
+                                            <th><a href="patient6.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000007</th>
+                                            <th>이현승</th>
+                                            <th>01064352381</th>
+                                            <th>남자</th>
+                                            <th><a href="patient7.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000008</th>
+                                            <th>박기훈</th>
+                                            <th>01046597845</th>
+                                            <th>남자</th>
+                                            <th><a href="patient8.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000009</th>
+                                            <th>김성훈</th>
+                                            <th>01021564545</th>
+                                            <th>남자</th>
+                                            <th><a href="patient9.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+                                        <tr>
+                                            <th>000010</th>
+                                            <th>박아영</th>
+                                            <th>01010376939</th>
+                                            <th>여자</th>
+                                            <th><a href="patient10.html" class="nav-link"><input type="button" name="a" value="확인"></a></th>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                    <tfoot>
+                                        <tr>
+                                            <th>회원번호</th>
+                                            <th>이름</th>
+                                            <th>연락처</th>
+                                            <th>회원성별</th>
+                                            <th>상세 정보 확인</th>
+                                        </tr>
+                                        
+                                          
+                                        
+                                    </tfoot>
+                                </table>
+
+                               </form>
+                            </div>
+                            
+                               
+                            <!-- /.card-body --> 
+                        </div>
+                        <!-- /.card -->
+                    </div>
+                    <!-- /.col --> 
+                </div>
+                <!-- /.row --> 
+            </div>
+            <!-- /.container-fluid --> 
+        </section>
+        
+        <!-- /.content --> 
+    
+    </div>
+    <!-- /.content-wrapper --> 
+  </section><!--/#services-->
+
+
+  <footer id="footer">
+    <div class="footer-top wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+      <div class="container text-center">
+        <div class="footer-logo">
+          <a href="index.html"><img class="img-responsive" src="images/" alt=""></a>
+        </div>
+        <div class="social-icons">
+          <ul>
+            <li><a class="envelope" href="#"><i class="fa fa-envelope"></i></a></li>
+            <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li> 
+            <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+            <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+            <li><a class="tumblr" href="#"><i class="fa fa-tumblr-square"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p>&copy; 2018 Caloria</p>
+          </div>
+          <div class="col-sm-6">
+            <p class="pull-right">Designed by <a href="https://www.konyang.ac.kr/">konyang</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/datatables/jquery.dataTables.js"></script> 
+  <script src="assets/datatables/dataTables.bootstrap4.js"></script> 
+  <!-- SlimScroll --> 
+  <script src="assets/js/jquery.slimscroll.min.js"></script> 
+  <!-- FastClick --> 
+  <script src="assets/js/fastclick.js"></script> 
+  <!-- AdminLTE App --> 
+  <script src="assets/js/adminlte.js"></script> 
+
+  <!-- OPTIONAL SCRIPTS --> 
+  <script src="assets/js/Chart.min.js"></script> 
+  <script src="assets/js/demo.js"></script>  
+  <script src="assets/js/classie.js"></script> 
+  <script>
+  var menuRight = document.getElementById( 'right-sidebar' ),
+      showRight = document.getElementById( 'showRight' ),
+      body = document.body;
+
+  showRight.onclick = function() {
+      classie.toggle( this, 'active' );
+      classie.toggle( body, 'right-sidebar-slide-open' );
+      disableOther( 'showRight' );
+  };
+  </script> 
+  <!-- page script --> 
+  <script>
+    $(function () {
+      $("#example1").DataTable();
+      $('#example2').DataTable({
+        "paging": true,
+        "lengthChange": false,
+        "searching": false,
+        "ordering": true,
+        "info": true,
+        "autoWidth": false
+      });
+    });
+  </script>
+
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <script type="text/javascript" src="js/jquery.inview.min.js"></script>
+  <script type="text/javascript" src="js/wow.min.js"></script>
+  <script type="text/javascript" src="js/mousescroll.js"></script>
+  <script type="text/javascript" src="js/smoothscroll.js"></script>
+  <script type="text/javascript" src="js/jquery.countTo.js"></script>
+  <script type="text/javascript" src="js/lightbox.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
