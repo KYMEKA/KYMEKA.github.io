@@ -6,4 +6,7 @@ The procedure for consent to use is as follows:
 3. Wait for an invitation to Private Github.
 4. Accept the invitation and download the data.
 
-#### 
+#### In our project, you can experience the Manual annotation tool. To experience it, please answer the Google survey. We will process your request as quickly as possible.
+The procedures for experiencing the tool are as follows:
+1. An invitation message will be sent to your email address after submitting the survey.
+2. Accept and read task1 on the homepage (https://kymeka.github.io/).
