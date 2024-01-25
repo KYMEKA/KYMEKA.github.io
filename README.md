@@ -1,4 +1,4 @@
-# This data consists of data that requires MIMIC-CXR licensing and data that does not.
+# This dataset consists of data that requires MIMIC-CXR licensing and data that does not.
 
 ## 1. KYMEKA_dataset (Licensing is not required)
 #### Based on chest radiographs, the cause of the diagnosis was collected in the form of questions and responses.
