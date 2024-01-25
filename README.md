@@ -7,6 +7,7 @@
 ###  
 ## 2. KYMEKA_with_MIMIC_dataset (Licensing is required)
 #### The data is sensitive that is about human material and requires consent for use. This dataset is based on MIMIC-CXR(https://physionet.org/content/mimic-cxr/2.0.0/files/#files-panel).
+#### This dataset can be associated with "1. KYMEKA_dataset".
 #### The procedure for consent to use is as follows:
 1. Please fill out the google form. Form link: https://forms.gle/uAD6L83vok9cwdyd8
 2. Please sign two consent documents in "Docs" folder and follow the Docs`s readme(https://github.com/KYMEKA/KYMEKA.github.io/blob/main/Docs/README.md).
